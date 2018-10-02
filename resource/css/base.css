@@ -1,0 +1,131 @@
+
+body{
+	background: #031432 url(../images/bg.jpg) no-repeat top center;
+}
+
+.layui-table,.layui-card-body,.layui-card-header,legend{
+	color: #FFFFFF !important;
+}
+
+.layui-card{
+	background-color: #eeeeee12;
+	border: 1px solid #26b6e7 !important;
+}
+
+.layui-table,thead tr,.layui-table tbody tr:hover {
+    background-color:  #eeeeee12!important;
+}
+
+table tr th, table tr td {
+	 border-color:#26b6e7 !important;
+}
+
+fieldset{
+	border: 1px solid #26b6e7 !important;
+}
+
+
+.tj-item-div{
+	background-color: #26b6e7d9!important;
+	height: 150px;
+	
+}
+
+.tj-item{
+	display:block;
+	text-align:center;
+	padding-top:55px;
+}
+
+
+.index-item-div{
+	display: inline-block;
+    vertical-align: middle;
+   	margin-top: 50px;
+    line-height: 25px;
+    padding: 20px 0;
+    border-bottom: 2px solid #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+.index-item-icon{
+	margin-top: 35px;
+	display: block;
+	font-size: 60px;
+	color: #FFFFFF;
+}
+
+.index-item-a{
+	display: block;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 16px;
+    padding-bottom: 45px;
+    color: #FFFFFF;
+
+}
+
+.index-item-a:hover {
+    color: #26b6e7d9;
+}
+
+.index-item-hr{
+	background-color: #ffffff00;
+}
+
+.index-h2{
+	color: #FFFFFF;
+	text-align: center;
+	display: block;
+	margin-top: 100px;
+}
+
+.layui-collapse,.layui-colla-content,.layui-colla-item{
+	border-color:#26b6e7!important;
+}
+
+.layui-colla-title{
+	background-color: #ffffff00;
+	color: #FFFFFF;
+}
+
+#wuli-site object{
+	z-index: 1000px !important;
+	position: static;
+}
+
+ .amap-logo {
+    right: 0 !important;
+    left: auto !important;
+    display: none !important;
+}
+
+.amap-copyright {
+    right: 70px !important;
+    left: auto !important;
+    display: none !important;
+}
+
+.layui-tab-title .layui-this {
+    color: #26b6e7d9;
+}
+
+.layui-tab{
+	color: #FFFFFF;
+}
+
+.layui-tab-title{
+	border-color:#26b6e7d9!important;
+}
+
+.layui-tab-title .layui-this:after {
+	    border-bottom-color: #26b6e7d9!important;
+}
+
+.layui-tab-card, .layui-tab-title, .layui-tab-title .layui-this:after, .layui-textarea{
+	border-color:#26b6e7d9!important;
+	
+}

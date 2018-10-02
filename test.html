@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+
+
+<!--javascript start-->
+
+  <script type='text/javascript' src="vendors/Highcharts6/highcharts.js"></script>
+  <script src="vendors/theme/dark-unica.js" type="text/javascript" charset="utf-8"></script>
+  <!--[if lt IE 9]>
+    <script src="https://img.hcharvendorss.cn/highcharts/modules/oldie.js"></script>
+  <![endif]-->
+
+  <!--额外js -->
+    <script src="vendors/Highcharts6/highcharts-3d.js" type="text/javascript" charset="utf-8"></script>
+    <script src="vendors/Highcharts6/modules/exporting.js"></script>
+    <script type="text/javascript" src="vendors/Highcharts6/modules/offline-exporting.js"></script>
+    <script src="vendors/Highcharts6/modules/export-data.js" type='text/javascript'></script>
+  <!--额外js-->
+
+<!--javascript end-->
+
+
+</head>
+<body>    
+
+  <div style="display: inline-block">
+    <div id="container1" style="width: 600px;height:400px; display: inline-block;"></div>
+
+  <div id="container2" style="width: 600px;height:400px;display: inline-block;"></div>
+
+  <div id="container3" style="width: 600px;height:400px;display: inline-block;"></div>
+
+  <div id="container4" style="width: 600px;height:400px;display: inline-block;"></div>
+
+  <div id="container5" style="width: 600px;height:400px;display: inline-block; "></div>
+  </div>
+  
+ 
+
+    <script>
+      
+
+var chart1 = Highcharts.chart('container1', {
+
+    title: {
+      text: '测试样例1'
+    },
+    subtitle:{
+      useHTML:true,
+      text: "<a href='https://www.hcharts.cn' target='_blank'>中文教程</a>" 
+    },
+    chart:{
+      type:'column',
+      zoomType: 'x',
+      // 3D 配置
+      // options3d: {
+      //   enabled: true,
+      //   alpha: 15,
+      //   beta: 15,
+      //   depth: 50,
+      //   viewDistance: 25
+      // }
+    },
+    xAxis: {
+        type: 'datetime',
+        title:{
+          text: '时间',
+        },
+    },
+    yAxis:{
+      title:{
+        text:'量',
+      }
+    },
+    colors: ['#f7a35c', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
+    //提示框
+    tooltip: {
+        backgroundColor: '#FCFFC5',   // 背景颜色
+        borderColor: 'black',         // 边框颜色
+        borderRadius: 10,             // 边框圆角
+        borderWidth: 3,               // 边框宽度
+        shadow: true,                 // 是否显示阴影
+        animation: true,               // 是否启用动画效果
+        style: {                      // 文字内容相关样式
+            color: "#ff0000",
+            fontSize: "12px",
+            fontWeight: "blod",
+            fontFamily: "Courir new"
+        }
+    },
+
+    //版权信息
+    credits: {
+        // enabled:true,                    // 默认值，如果想去掉版权信息，设置为false即可
+        text: '测试',             // 显示的文字
+        //href: 'http://www.hcharts.cn',      // 链接地址
+        position: {                         // 位置设置 
+            align: 'right',
+            //x: 400,
+            verticalAlign: 'bottom',
+            //y: -100
+        },
+        style: {                            // 样式设置
+            cursor: 'pointer',
+            color: 'red',
+            fontSize: '12px'
+        }
+    },
+
+    plotOptions: {
+     
+    },
+
+
+    series: [{
+        name:'销售量',
+        data: [29.9, 71.5, 106.4, 129.2,  {
+            y: 144.0,
+            marker: { 
+              fillColor: '#BF0B23',
+              radius: 5 
+            }
+          }, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        pointStart: Date.UTC(2010, 0, 1),  //X轴数据开始点
+        pointInterval: 3600 * 1000,// X轴间隔
+        
+    }]
+});
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

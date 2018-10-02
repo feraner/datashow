@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>可视化展示平台</title>
+  <link rel="stylesheet" href="vendors/layui/css/layui.css" media="all">
+
+  	<!--javascript start-->
+	  <script type='text/javascript' src="vendors/Highcharts6/highcharts.js"></script>
+	  <script type="text/javascript" src="vendors/Highmaps6/modules/map.js"></script>
+	  <script src="vendors/theme/dark-unica.js" type="text/javascript" charset="utf-8"></script>
+
+
+	  <!--额外js -->
+	    <!-- <script src="vendors/Highcharts6/highcharts-3d.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="vendors/Highcharts6/modules/exporting.js"></script>
+	    <script type="text/javascript" src="vendors/Highcharts6/modules/offline-exporting.js"></script>
+	    <script src="vendors/Highcharts6/modules/export-data.js" type='text/javascript'></script> -->
+	  <!--额外js-->
+	<!--javascript end-->
+
+	<script src="vendors/yunnan.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="resource/css/base.css">
+</head>
+<body>
+ 
+
+<div class="layui-fluid">
+
+
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-xs6 ">
+			<fieldset class="layui-elem-field">
+				<legend>资产状况</legend>
+				<div id="money-map"></div>
+  			</fieldset>
+			
+		</div>
+		<div class="layui-col-xs6">
+			<fieldset class="layui-elem-field">
+				<legend>建设进度</legend>
+				<div class="layui-progress layui-progress-big" lay-showPercent="yes" style="margin: 30px;">
+				  <div class="layui-progress-bar layui-bg-blue" lay-percent="75%"></div>
+				</div>
+
+				<div class="layui-card" style="margin-top: 67px;">
+				  <div class="layui-card-header">进度详细</div>
+				  <div class="layui-card-body">
+				   这里写站点介绍：就意义上人们所理解的门户类网站主要是指一些综合性质的网站，也就相对于那些专业性较强、涉及内容较为单一的垂直类网站。二者的区别似乎可以形象的理解为：超级市场（supermarket）与专卖店（Exclusive Shop）之间的区别，前者品牌及商品类型众多，后者却较为单一。但是如果严格的从互联网门户概念的诞生以及门户字面意义来讲，各种类型的网站都可成为门户类网站，因为从字面上来理解，门户本身应该就是一种手段、媒介，通过这个媒介领略大千网络世界，这样理解的话所谓门户不应有内容类型以及多寡的歧视的。
+				    这里写站点介绍：就意义上人们所理解的门户类网站主要是指一些综合性质的网站，也就相对于那些专业性较强、涉及内容较为单一的垂直类网站。二者的区别似乎可以形象的理解为：超级市场（supermarket）与专卖店（Exclusive Shop）之间的区别，前者品牌及商品类型众多，后者却较为单一。但是如果严格的从互联网门户概念的诞生以及门户字面意义来讲，各种类型的网站都可成为门户类网站，因为从字面上来理解，门户本身应该就是一种手段、媒介，通过这个媒介领略大千网络世界，这样理解的话所谓门户不应有内容类型以及多寡的歧视的。
+				     这里写站点介绍：就意义上人们所理解的门户类网站主要是指一些综合性质的网站，也就相对于那些专业性较强、涉及内容较为单一的垂直类网站。
+
+				  </div>
+				</div>
+  			</fieldset>
+			
+			
+		</div>
+	</div>
+
+	
+
+
+</div>
+ 
+
+<script src="vendors/layui/layui.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	//注意进度条依赖 element 模块，否则无法进行正常渲染和功能性操作
+	layui.use('element', function(){
+	  var element = layui.element;
+	});
+
+
+
+	//资产公示图
+	Highcharts.chart('money-map', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie'
+		},
+		title: {
+			text: '资产概况'
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		credits:{
+	     enabled: false // 禁用版权信息
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+					style: {
+						color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+					}
+				},
+				showInLegend: true
+			}
+		},
+		series: [{
+			name: 'Brands',
+			colorByPoint: true,
+			data: [{
+				name: '资产1',
+				y: 61.41,
+				sliced: true,
+				selected: true
+			}, {
+				name: '资产2',
+				y: 11.84
+			}, {
+				name: '资产3',
+				y: 10.85
+			}, {
+				name: '资产4',
+				y: 4.67
+			}, {
+				name: '资产5',
+				y: 4.18
+			}, {
+				name: '资产6',
+				y: 1.64
+			}, {
+				name: '资产7',
+				y: 1.6
+			}, {
+				name: '资产8',
+				y: 1.2
+			}, {
+				name: '资产9',
+				y: 2.61
+			}]
+		}]
+	});
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

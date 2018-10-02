@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>可视化展示平台</title>
+  <link rel="stylesheet" href="vendors/layui/css/layui.css" media="all">
+
+  	<!--javascript start-->
+	  <script type='text/javascript' src="vendors/Highcharts6/highcharts.js"></script>
+	  <script type="text/javascript" src="vendors/Highmaps6/modules/map.js"></script>
+	  <script src="vendors/theme/dark-unica.js" type="text/javascript" charset="utf-8"></script>
+
+	  <!--额外js -->
+	    <!-- <script src="vendors/Highcharts6/highcharts-3d.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="vendors/Highcharts6/modules/exporting.js"></script>
+	    <script type="text/javascript" src="vendors/Highcharts6/modules/offline-exporting.js"></script>
+	    <script src="vendors/Highcharts6/modules/export-data.js" type='text/javascript'></script> -->
+	  <!--额外js-->
+	<!--javascript end-->
+
+	<script src="vendors/yunnan.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="resource/css/base.css">
+
+</head>
+<body>
+ 
+
+<div class="layui-fluid">
+
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-xs12 layui-col-md6">
+			<fieldset class="layui-elem-field">
+				<legend>扶贫产品销售详细</legend>
+				<div>
+					<table class="layui-table">
+				  <colgroup>
+				    <col >
+				    <col width="200">
+				    <col width="150">
+				  </colgroup>
+				  <thead>
+				    <tr>
+				      <th>帮扶产品名称</th>
+				      <th>销售量</th>
+				      <th>销售额</th>
+				      <th>销量排名</th>
+				    </tr> 
+				  </thead>
+				  <tfoot>
+				  	<tr>
+				  		<td colspan="4" class="">一共有300家网店</td>
+				  	</tr>
+				  </tfoot>
+				  <tbody>
+				    <tr>
+				      <td>帮扶产品1</td>
+				      <td>5000</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				     <tr>
+				      <td>帮扶产品1</td>
+				      <td>5000</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				     <tr>
+				      <td>帮扶产品1</td>
+				      <td>5000</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				     <tr>
+				      <td>帮扶产品1</td>
+				      <td>5000</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				     <tr>
+				      <td>帮扶产品1</td>
+				      <td>5000</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				     <tr>
+				      <td>帮扶产品1</td>
+				      <td>5000</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				     <tr>
+				      <td>帮扶产品1</td>
+				      <td>5000</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+
+				   
+				  </tbody>
+				</table>
+				</div>
+  			</fieldset>
+			
+		</div>
+
+		<div class="layui-col-xs12 layui-col-md6">
+			<fieldset class="layui-elem-field">
+				<legend>销售产品</legend>
+				<div id="container2"></div>
+  			</fieldset>
+			
+			<fieldset class="layui-elem-field">
+				<legend>详细列表</legend>
+				<table class="layui-table">
+				  <colgroup>
+				    <col width="300">
+				    <col width="200">
+				    <col >
+				  </colgroup>
+				  <thead>
+				    <tr>
+				      <th>产品名称</th>
+				      <th>销量(万)</th>
+				      <th>销量排名</th>
+				    </tr> 
+				  </thead>
+				  <tfoot>
+				  	<tr>
+				  		<td colspan="3" class="">一共有3000件产品</td>
+				  	</tr>
+				  </tfoot>
+				  <tbody>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>荔波刘二农无公害散养香猪鲜肉（生肉）</td>
+				      <td>5000</td>
+				      <td>1</td>
+				    </tr>
+				    <tr>
+				      <td>刘二农无公害土黄豆</td>
+				      <td>4800</td>
+				      <td>2</td>
+				    </tr>
+				  </tbody>
+				</table>
+  			</fieldset>
+			
+				
+			
+		</div>
+	</div>
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-xs12 layui-col-md6">
+			<div id='jiandang-poor'></div>
+		</div>
+
+		<div class="layui-col-md6">
+			<fieldset class="layui-elem-field">
+				<legend>建档立卡贫困详细</legend>
+				<div>
+					<table class="layui-table">
+				  <colgroup>
+				    <col >
+				    <col width="200">
+				    <col width="150">
+				  </colgroup>
+				  <thead>
+				    <tr>
+				      <th>县区</th>
+				      <th>乡镇</th>
+				      <th>村落</th>
+				      <th>贫困户</th>
+				      <th>人均收入</th>
+				    </tr> 
+				  </thead>
+				  <tfoot>
+				  	<tr>
+				  		<td colspan="5" class="">一共有300家网店</td>
+				  	</tr>
+				  </tfoot>
+				  <tbody>
+				    <tr>
+				      <td>祥云县</td>
+				      <td>小石洞</td>
+				      <td>老鹰乡</td>
+				      <td>XXX</td>
+				      <td>783.50</td>
+				    </tr>
+				     <tr>
+				      <td>祥云县</td>
+				      <td>小石洞</td>
+				      <td>老鹰乡</td>
+				      <td>XXX</td>
+				      <td>783.50</td>
+				    </tr>
+				     <tr>
+				      <td>祥云县</td>
+				      <td>小石洞</td>
+				      <td>老鹰乡</td>
+				      <td>XXX</td>
+				      <td>783.50</td>
+				    </tr>
+				     <tr>
+				      <td>祥云县</td>
+				      <td>小石洞</td>
+				      <td>老鹰乡</td>
+				      <td>XXX</td>
+				      <td>783.50</td>
+				    </tr>
+				     <tr>
+				      <td>祥云县</td>
+				      <td>小石洞</td>
+				      <td>老鹰乡</td>
+				      <td>XXX</td>
+				      <td>783.50</td>
+				    </tr>
+				     <tr>
+				      <td>祥云县</td>
+				      <td>小石洞</td>
+				      <td>老鹰乡</td>
+				      <td>XXX</td>
+				      <td>783.50</td>
+				    </tr>
+				      <tr>
+				      <td>祥云县</td>
+				      <td>小石洞</td>
+				      <td>老鹰乡</td>
+				      <td>XXX</td>
+				      <td>783.50</td>
+				    </tr>
+
+
+				   
+
+				   
+				  </tbody>
+				</table>
+				</div>
+  			</fieldset>
+		</div>
+	</div>
+	
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-md12">
+			<fieldset class="layui-elem-field">
+				<legend>帮扶概况</legend>
+				<div class="layui-card">
+				  <div class="layui-card-body">
+				   帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，帮扶概况说明，
+				  </div>
+				</div>
+  			</fieldset>
+
+			
+		</div>
+
+		<div class="layui-col-md6">
+			<div id="help-active"></div>
+		</div>
+
+		<div class="layui-col-md6">
+			<fieldset class="layui-elem-field">
+				<legend>帮扶详细</legend>
+				<table class="layui-table">
+				  <colgroup>
+				    <col width="150">
+				    <col width="100">
+				    <col>
+				  </colgroup>
+				  <thead>
+				    <tr>
+				      <th>活动名称</th>
+				      <th>举办次数</th>
+				      <th>参与人数</th>
+				      <th>主办方</th>
+				    </tr> 
+				  </thead>
+				  <tfoot>
+				  	<tr>
+				  		<td colspan="4" class="">一共有3000次活动</td>
+				  	</tr>
+				  </tfoot>
+				  <tbody>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+				    <tr>
+				      <td>核桃林管理</td>
+				      <td>23</td>
+				      <td>538</td>
+				      <td>祥云县农业局</td>
+				    </tr>
+
+				    
+				  </tbody>
+				</table>
+  			</fieldset>
+		</div>
+	</div>
+
+	<div class="layui-row">
+		<div class="layui-col-md12">
+			<h2 class="index-h2">案例展示</h2>
+		</div>
+	</div>
+
+
+</div>
+ 
+
+
+
+<script type="text/javascript">
+	var xiaoshou = Highcharts.chart('container2', {
+	    chart: {
+	        type: 'column'
+	    },
+	    title: {
+	        text: '帮扶产品销售排行'
+	    },
+	    subtitle: {
+	        text: '数据每5分钟更新'
+	    },
+	    xAxis: {
+	        type: 'category',
+	        labels: {
+	            rotation: -45  // 设置轴标签旋转角度
+	        }
+	    },
+	    yAxis: {
+	        min: 0,
+	        title: {
+	            text: '销售量（万）'
+	        }
+	    },
+	    legend: {
+	        enabled: false
+	    },
+	    credits:{
+	     enabled: false // 禁用版权信息
+		},
+	    tooltip: {
+	        pointFormat: '销售量: <b>{point.y:.1f} 万</b>'
+	    },
+	    series: [{
+	        name: '总人口',
+	        data: [
+	            ['散养生牛肉', 24.25],
+	            ['散养香猪鲜肉', 23.50],
+	            ['产品1', 21.51],
+	            ['产品2', 16.78],
+	            ['产品3', 16.06],
+	            ['产品4', 15.20],
+	            ['产品5', 14.16],
+	            ['产品6', 13.51],
+	            ['产品7', 13.08],
+	            ['产品8', 12.44],
+	            ['产品9', 12.19],
+	            ['产品10', 12.03],
+	            ['产品11', 10.46],
+	            ['产品12', 10.07],
+	            ['产品13', 10.05],
+	            ['产品14', 9.99],
+	            ['产品15', 9.78],
+	            ['产品16', 9.73],
+	            ['产品17', 9.27],
+	            ['产品18', 8.87]
+	        ],
+	        dataLabels: {
+	            enabled: true,
+	            rotation: -90,
+	            color: '#FFFFFF',
+	            align: 'right',
+	            format: '{point.y:.1f}', // :.1f 为保留 1 位小数
+	            y: 10
+	        }
+	    }]
+	});
+
+
+
+	Highcharts.chart('jiandang-poor', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie'
+		},
+		title: {
+			text: '建档立卡贫困'
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.0f}</b>'
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					format: '<b>{point.name}</b>: {point.percentage:.0f}户',
+					style: {
+						color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+					}
+				},
+				showInLegend: true
+			}
+		},
+		series: [{
+			name: '贫困户',
+			colorByPoint: true,
+			data: [{
+				name: '剑川县',
+				y: 61.41,
+				sliced: true,
+				selected: true
+			}, {
+				name: '永平县',
+				y: 11.84
+			}, {
+				name: '云龙县',
+				y: 10.85
+			}, {
+				name: '大理',
+				y: 4.67
+			}, {
+				name: '祥云县',
+				y: 4.18
+			}, {
+				name: '宾川县',
+				y: 7.05
+			}, {
+				name: '洱源县',
+				y: 7.05
+			}, {
+				name: '弥渡县',
+				y: 7.05
+			}, {
+				name: '蔚山',
+				y: 7.05
+			}, {
+				name: '宾川县',
+				y: 7.05
+			}]
+		}]
+	});
+
+
+	var helpactive = Highcharts.chart('help-active', {
+	    chart: {
+	        type: 'column'
+	    },
+	    title: {
+	        text: '帮扶统计'
+	    },
+	    subtitle: {
+	        text: '数据每5分钟更新'
+	    },
+	    xAxis: {
+	        type: 'category',
+	        
+	    },
+	    yAxis: {
+	        min: 0,
+	    },
+	    legend: {
+	        enabled: false
+	    },
+	    credits:{
+	     enabled: false // 禁用版权信息
+		},
+	    tooltip: {
+	        pointFormatter: function() {
+			    return '<span style="color: '+ this.series.color + '">\u25CF</span> '+
+			           this.name+': <b>'+ this.y +'</b>'
+			}
+	    },
+	    series: [{
+	        data: [
+	        	{y:50,name:'帮扶活动'},
+	        	{y:52,name:'帮扶资金'},
+	        	{y:53,name:'帮扶户数'},
+	        	{y:70,name:'帮扶产品'},
+	        	{y:54,name:'帮扶销售额'},
+	           
+	        ],
+	        dataLabels: {
+	            enabled: true,
+	            rotation: -90,
+	            color: '#FFFFFF',
+	            align: 'right',
+	            format: '{point.y:.0f}', // :.1f 为保留 1 位小数
+	            y: 10
+	        }
+	    }]
+	});
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
