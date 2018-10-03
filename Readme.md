@@ -60,9 +60,10 @@
 ###7.电商人才培训管理系统
 				统计报表：培训人次，老师数量，培训课程数量，培训课下载数量  [表格]
 				培训计划：时间任务图  https://www.hcharts.cn/demo/highcharts/x-range
+				培训老师展示： 照片墙+介绍   样例 http://www.17sucai.com/pins/demo-show?id=6664
 				课程展示： 图片+文字
 				培训案例展示： 文字
-				培训老师展示： 照片墙+介绍   样例 http://www.17sucai.com/pins/demo-show?id=6664
+				
 
 
 

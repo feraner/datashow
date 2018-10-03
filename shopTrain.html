@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>可视化展示平台</title>
+  <link rel="stylesheet" href="vendors/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="vendors/layui/css/modules/layer/default/layer.css" media="all">
+  <script type="text/javascript" src="vendors/layui/layui.js"></script>
+  <script type="text/javascript" src="vendors/layui/lay/modules/layer.js"></script>
+
+  	<!--javascript start-->
+	  <script type='text/javascript' src="vendors/Highcharts6/highcharts.js"></script>
+	  <script type="text/javascript" src="vendors/Highcharts6/modules/xrange.js" ></script>
+	  <script type="text/javascript" src="vendors/Highmaps6/modules/map.js"></script>
+	  <script src="vendors/theme/dark-unica.js" type="text/javascript" charset="utf-8"></script>
+
+
+	  <!--额外js -->
+	    <!-- <script src="vendors/Highcharts6/highcharts-3d.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="vendors/Highcharts6/modules/exporting.js"></script>
+	    <script type="text/javascript" src="vendors/Highcharts6/modules/offline-exporting.js"></script>
+	    <script src="vendors/Highcharts6/modules/export-data.js" type='text/javascript'></script> -->
+	  <!--额外js-->
+	<!--javascript end-->
+	<link rel="stylesheet" type="text/css" href="resource/css/base.css">
+</head>
+<body>
+ 
+
+<div class="layui-fluid">
+
+
+	<div class="layui-row">
+		<fieldset class="layui-elem-field ">
+			<legend>概况</legend>
+			<div class="layui-col-md1 layui-circle layui-col-md-offset2 layui-anim layui-anim-rotate tj-item-div">
+				<span class="tj-item">培训人次<br/>6500人次</span>
+			</div>
+
+			<div class="layui-col-md1 layui-circle layui-col-md-offset1 layui-anim layui-anim-rotate tj-item-div">
+				<span class="tj-item">老师<br/>522名</span>
+			</div>
+
+			<div class="layui-col-md1 layui-circle layui-col-md-offset1 layui-anim layui-anim-rotate tj-item-div">
+				<span class="tj-item">培训课程<br/>50课</span>
+			</div>
+
+			<div class="layui-col-md1 layui-circle layui-col-md-offset1 layui-anim layui-anim-rotate tj-item-div">
+				<span class="tj-item">培训课下载<br/>13次</span>
+			</div>
+		</fieldset>
+		
+	</div>
+
+
+
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-xs12 layui-col-md12">
+			<fieldset class="layui-elem-field">
+				<legend>培训计划</legend>
+				<div id="train-plain"></div>
+  			</fieldset>
+		</div>
+
+		
+	</div>
+
+
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-xs12 layui-col-md12">
+			<fieldset class="layui-elem-field">
+				<legend>名师展</legend>
+				<div class="" id="teacher-show">
+					<img src="resource/images/teacher1.jpg" layer-src="resource/images/teacher1.jpg" data-title="老师名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年七匹狼实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher2.jpg" layer-src="resource/images/teacher2.jpg" data-title="老师名字2" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher3.jpg" layer-src="resource/images/teacher3.jpg" data-title="老师名字3" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher1.jpg" layer-src="resource/images/teacher1.jpg" data-title="老师名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年七匹狼实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher2.jpg" layer-src="resource/images/teacher2.jpg" data-title="老师名字2" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher3.jpg" layer-src="resource/images/teacher3.jpg" data-title="老师名字3" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher1.jpg" layer-src="resource/images/teacher1.jpg" data-title="老师名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年七匹狼实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher2.jpg" layer-src="resource/images/teacher2.jpg" data-title="老师名字2" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher3.jpg" layer-src="resource/images/teacher3.jpg" data-title="老师名字3" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher1.jpg" layer-src="resource/images/teacher1.jpg" data-title="老师名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年七匹狼实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher2.jpg" layer-src="resource/images/teacher2.jpg" data-title="老师名字2" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+					<img src="resource/images/teacher3.jpg" layer-src="resource/images/teacher3.jpg" data-title="老师名字3" data-detail='老师名字1品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克，成为红遍大江南北的“茄克之王”，并在此后连续16年中国茄克市场占有率第一。 [1]  2004年老师名字1实业股份有限公司作为中国服装业首家公司上市（股票代码：002029）。' class="teacher-items layui-col-md2">
+				</div>
+  			</fieldset>
+		</div>
+	</div>
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-xs12 layui-col-md12">
+			<fieldset class="layui-elem-field">
+				<legend>课程展</legend>
+				<div class="" id="teacher-show">
+					<img src="resource/images/kc.jpg" layer-src="resource/images/kc.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc2.jpg" layer-src="resource/images/kc2.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc3.jpg" layer-src="resource/images/kc3.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc.jpg" layer-src="resource/images/kc.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc2.jpg" layer-src="resource/images/kc2.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc3.jpg" layer-src="resource/images/kc3.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc.jpg" layer-src="resource/images/kc.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc2.jpg" layer-src="resource/images/kc2.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc3.jpg" layer-src="resource/images/kc3.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc.jpg" layer-src="resource/images/kc.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc2.jpg" layer-src="resource/images/kc2.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc3.jpg" layer-src="resource/images/kc3.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc.jpg" layer-src="resource/images/kc.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc2.jpg" layer-src="resource/images/kc2.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc3.jpg" layer-src="resource/images/kc3.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc.jpg" layer-src="resource/images/kc.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc2.jpg" layer-src="resource/images/kc2.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+					<img src="resource/images/kc3.jpg" layer-src="resource/images/kc3.jpg" data-teacher="小明老师" data-title="课程名字1" data-detail='七匹狼品牌创立于1990年，是中国男装行业开创性品牌。2000年推出格子茄克...' class="curriculum-items layui-col-md2">
+				
+					
+				</div>
+  			</fieldset>
+		</div>
+	</div>
+
+	<div class="layui-row layui-col-space10">
+		<div class="layui-col-xs12 layui-col-md12">
+			<fieldset class="layui-elem-field">
+				<legend>品牌案例</legend>
+				<section class="layui-text">
+					<div class="article-content"><p>漫步在人民广场附近</p><p>不经意间有没有发现</p><p>脚下的井盖带来的小惊喜？</p><p>小猪佩奇来到了现实世界</p><p>萌神比卡丘、hello KT也现身井盖</p><p>画作简单却充满童趣</p><p>这些耳熟能详的卡通形象</p><p>让一个个冷冰冰的井盖鲜活了起来</p><p>成为街头一道靓丽的风景</p><p>扮靓了整个城市</p><div class="img-container"><img class="large" data-loadfunc="0" src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1958800280,319492114&amp;fm=173&amp;app=25&amp;f=JPEG?w=640&amp;h=649&amp;s=1FE2E605C633F6650682154A030070DA" data-loaded="0"></div><div class="img-container"><img class="large" data-loadfunc="0" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3758759346,962476491&amp;fm=173&amp;app=25&amp;f=JPEG?w=640&amp;h=703&amp;s=56B38061CD1252570A24F5CE0100E091" data-loaded="0"></div><div class="img-container"><img class="large" data-loadfunc="0" src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2422271261,1600617519&amp;fm=173&amp;app=25&amp;f=JPEG?w=640&amp;h=642&amp;s=BAA0F801E65059CE1F05B5DB0300B095" data-loaded="0"></div><p>这些井盖涂鸦引来了众多市民驻足观看</p><p>大家纷纷拍照留念</p><p>同时也对这一行为表示赞赏</p><p>↓↓↓</p><p>217：好看 好！</p><p>DC133233：比原来好看多了</p><p>罪爱高山流水：市政广场也这样了，比较好看，建议别出现相同的图案</p><p>东方涵瑶: 有点小新颖,看着好可爱</p><p>梧桐苑安慕希:一定要把井盖维护好</p><p>N七N:不错啊，既美观还能提示那是井盖，小心万一有破损的什么的。</p><p>小可居士:多好看，这样的城市才有个性和温情</p><p>轩辕尨軒:挺好看的希望不要遭到人为的破坏</p><p>孤星独客:朋友圈里有个孩子画的那个荷花</p><p>傻傻的来福:其中一个是我外甥女画的</p><p>井盖随处可见，可是没有多少人会留意它，但只要稍加装饰，毫不起眼的井盖有了艺术范，成为城市的一道靓丽风景线。</p><p>在此小编要说，我们需要的就是这样的文化创造力来装点我们的生活，来体现一个城市的内在文明魅力，让井盖创意画成为城市文明新风尚的突破口，为文明城市再添新风采。</p></div>
+				</section>
+  			</fieldset>
+		</div>
+	</div>
+
+</div>
+ 
+
+
+
+
+
+
+<!--图片弹出层-->
+ <div class="layui-fluid" style="display: none;" id='teacher-detail-div'>
+ 	<div class="layui-row">
+ 		<div class="layui-col-md12">
+ 			<img src="#" style="width:100%;height: 100%" id='teacher-detail-img'>
+ 		</div>
+ 		<div class="layui-col-md12">
+ 			<h2 id="teacher-detail-title"></h2>
+ 			<hr class="layui-bg-gray">
+ 			<section id="teacher-detail-section" class="layui-word-aux"></section>
+ 		</div>
+ 	</div>
+ </div>
+ <!--图片弹出层-->
+
+ <!--课程弹出层-->
+ <div class="layui-fluid" style="display: none;" id='curriculum-detail-div'>
+ 	<div class="layui-row">
+ 		<div class="layui-col-md12">
+ 			<img src="#" style="width:100%;height: 100%" id='curriculum-detail-img'>
+ 		</div>
+ 		<div class="layui-col-md12">
+ 			<h2 id="curriculum-detail-title"></h2>
+ 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;讲师：<span id="curriculum-detail-teacher"></span>
+ 			<hr class="layui-bg-gray">
+ 			<section id="curriculum-detail-section" class="layui-word-aux"></section>
+ 		</div>
+ 	</div>
+ </div>
+ <!--课程弹出层-->
+
+<script src="vendors/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+	Highcharts.chart('train-plain', {
+		chart: {
+			type: 'xrange',
+		},
+		title: {
+			text: '计划甘特图'
+		},
+		xAxis: {
+			type: 'datetime',
+			dateTimeLabelFormats: {
+				//week: '%Y/%m/%d'
+				day: '%m月%d日'
+			},
+
+		},
+		yAxis: {
+			title: {
+				text: ''
+			},
+			categories: ['准备', '实施', '验收','汇报'],
+			reversed: true
+		},
+		tooltip: {
+			dateTimeLabelFormats: {
+				day: '%Y/%m/%d'
+			}
+		},
+		credits:{
+	     	enabled: false // 禁用版权信息
+		},
+		legend: {
+			color:'#FFFFFF',
+			//labelFormat: '<span style="{color}">{name} (click to hide or show)</span>'
+		},
+		series: [{
+			name: '种植西瓜',
+			pointWidth: 20,
+			data: [{
+				x: Date.UTC(2014, 10, 21),
+				x2: Date.UTC(2014, 11, 2),
+				y: 0,
+				partialFill: 0.25,
+			}, {
+				x: Date.UTC(2014, 11, 2),
+				x2: Date.UTC(2014, 11, 5),
+				y: 1,
+				partialFill: 0.25,
+			}, {
+				x: Date.UTC(2014, 11, 8),
+				x2: Date.UTC(2014, 11, 9),
+				y: 2
+			}, {
+				x: Date.UTC(2014, 11, 9),
+				x2: Date.UTC(2014, 11, 19),
+				y: 1
+			}, {
+				x: Date.UTC(2014, 11, 10),
+				x2: Date.UTC(2014, 11, 23),
+				y: 2
+			},
+			{
+				x: Date.UTC(2014, 11, 10),
+				x2: Date.UTC(2014, 11, 23),
+				y: 3
+			}],
+			dataLabels: {
+				enabled: true
+			}
+		},{
+			name: '制作手工艺',
+			pointWidth: 20,
+			data: [{
+				x: Date.UTC(2014, 10, 21),
+				x2: Date.UTC(2014, 10, 27),
+				y: 0,
+				partialFill: 0.45
+			}, {
+				x: Date.UTC(2014, 11, 2),
+				x2: Date.UTC(2014, 11, 4),
+				y: 1
+			}, {
+				x: Date.UTC(2014, 11, 8),
+				x2: Date.UTC(2014, 11, 10),
+				y: 2
+			}, {
+				x: Date.UTC(2014, 11, 9),
+				x2: Date.UTC(2014, 11, 20),
+				y: 1
+			}, {
+				x: Date.UTC(2014, 11, 10),
+				x2: Date.UTC(2014, 11, 23),
+				y: 2
+			}],
+			dataLabels: {
+				enabled: true
+			}
+		}]
+	});
+
+	var layer;
+	layui.use('layer', function(){
+	  var layer = layui.layer;
+	});
+
+	//照片墙
+	$(function(){
+		$('.teacher-items').on('click', function(){
+			teacherLayer($(this));
+		});
+		$('.curriculum-items').on('click', function(){
+			curriculumLayer($(this));
+		});
+	});
+
+	function curriculumLayer(it) {
+		$('#curriculum-detail-img').attr('src', $(it).attr('layer-src'));
+		$('#curriculum-detail-title').text($(it).data('title'));
+		$('#curriculum-detail-section').text($(it).data('detail'));
+		$('#curriculum-detail-teacher').text($(it).data('teacher'));
+		layer.open({
+			title:'',
+			closeBtn:0,
+		  	type: 1,
+		  	shadeClose:true,
+		  	anim:4,
+		  	resize:true,
+		   	area: ['800px', '750px'],
+		  	content: $('#curriculum-detail-div'),
+		  	end:function(){
+		  		$('#curriculum-detail-div').hide();
+		  	}
+		});
+	}
+
+	function teacherLayer(it) {
+		$('#teacher-detail-img').attr('src', $(it).attr('layer-src'));
+		$('#teacher-detail-title').text($(it).data('title'));
+		$('#teacher-detail-section').text($(it).data('detail'));
+		layer.open({
+			title:'',
+			closeBtn:0,
+		  	type: 1,
+		  	shadeClose:true,
+		  	anim:4,
+		  	resize:true,
+		   	area: ['800px', '750px'],
+		  	content: $('#teacher-detail-div'),
+		  	end:function(){
+		  		$('#teacher-detail-div').hide();
+		  	}
+		});
+	}
+
+</script>
+</body>
+</html>

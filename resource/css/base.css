@@ -22,6 +22,7 @@ table tr th, table tr td {
 
 fieldset{
 	border: 1px solid #26b6e7 !important;
+	border-radius: 15px;
 }
 
 
@@ -127,5 +128,36 @@ fieldset{
 
 .layui-tab-card, .layui-tab-title, .layui-tab-title .layui-this:after, .layui-textarea{
 	border-color:#26b6e7d9!important;
-	
+
 }
+
+.img-items,.teacher-items,.curriculum-items{
+	display: block;
+	padding: 5px;
+	border:1px solid #3636375c;
+	height: 200px;
+	border-radius: 10px;
+}
+
+.news-list{
+	margin-top: 15px;
+	margin-left: 55px;
+}
+
+.news-list > li {
+	line-height: 30px;
+	border-bottom: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.news-list > li > a{
+	color: #FFFFFF;
+}
+
+.news-list > li:hover {
+	color: #26b6e7d9!important;
+}
+
+
+
+
